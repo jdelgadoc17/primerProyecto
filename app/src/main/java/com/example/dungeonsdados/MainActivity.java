@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     public int contadorGeneral=0;
     public int contadorD4=0;
     public int contadorD6=0;
+    public int contadorD8=0;
+    public int contadorD10=0;
+
+
 
 
     @Override
@@ -64,6 +68,32 @@ public class MainActivity extends AppCompatActivity {
                 contadorD6++;
                 binding.ResultadoD6.setText(String.valueOf(azar));
                 binding.TiradaD6.setText(String.valueOf(contadorD6));
+                contadorGeneral++;
+            }
+        });
+
+        binding.BotonD8.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View view) {
+                Random rand = new Random();
+                int azar = rand.nextInt(8)+1;
+                contadorD8++;
+                binding.ResultadoD8.setText(String.valueOf(azar));
+                binding.TiradaD8.setText(String.valueOf(contadorD8));
+                contadorGeneral++;
+            }
+        });
+
+        binding.BotonD10.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View view) {
+                Random rand = new Random();
+                int azar = rand.nextInt(10)+1;
+                contadorD10++;
+                binding.ResultadoD10.setText(String.valueOf(azar));
+                binding.TiradaD10.setText(String.valueOf(contadorD10));
                 contadorGeneral++;
             }
         });
