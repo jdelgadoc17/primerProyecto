@@ -22,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
     public int contadorD6=0;
     public int contadorD8=0;
     public int contadorD10=0;
+    public int contadorD12=0;
+    public int contadorD20=0;
+    public int contadorD100=0;
+
+
+
 
 
 
@@ -97,6 +103,48 @@ public class MainActivity extends AppCompatActivity {
                 contadorD10++;
                 binding.ResultadoD10.setText(String.valueOf(azar));
                 binding.TiradaD10.setText(String.valueOf(contadorD10));
+                contadorGeneral++;
+                binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
+            }
+        });
+
+        binding.BotonD12.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View view) {
+                Random rand = new Random();
+                int azar = rand.nextInt(10)+1;
+                contadorD12++;
+                binding.ResultadoD12.setText(String.valueOf(azar));
+                binding.TiradaD12.setText(String.valueOf(contadorD12));
+                contadorGeneral++;
+                binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
+            }
+        });
+
+        binding.BotonD20.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View view) {
+                Random rand = new Random();
+                int azar = rand.nextInt(20)+1;
+                contadorD20++;
+                binding.ResultadoD20.setText(String.valueOf(azar));
+                binding.TiradaD20.setText(String.valueOf(contadorD20));
+                contadorGeneral++;
+                binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
+            }
+        });
+
+        binding.BotonD100.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View view) {
+                Random rand = new Random();
+                int azar = rand.nextInt(100)+1;
+                contadorD100++;
+                binding.ResultadoD100.setText(String.valueOf(azar));
+                binding.TiradaD100.setText(String.valueOf(contadorD100));
                 contadorGeneral++;
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
             }
