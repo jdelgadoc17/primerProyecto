@@ -1,9 +1,11 @@
 package com.example.dungeonsdados;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -11,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.dungeonsdados.databinding.ActivityMainBinding;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,20 +30,22 @@ public class MainActivity extends AppCompatActivity {
     public int contadorD100=0;
 
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstance) {
+        super.onSaveInstanceState(savedInstance);
 
 
 
 
+    } //FIN ONSAVEINSTANCE
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
 
         //RESET
         binding.BotonReset.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +53,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 contadorGeneral=0;
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
+                binding.ResultadoD4.setText("-");
+                binding.ResultadoD6.setText("-");
+                binding.ResultadoD8.setText("-");
+                binding.ResultadoD10.setText("-");
+                binding.ResultadoD12.setText("-");
+                binding.ResultadoD20.setText("-");
+                binding.ResultadoD100.setText("-");
+
+                binding.TiradaD4.setText(String.valueOf(0));
+                binding.TiradaD6.setText(String.valueOf(0));
+                binding.TiradaD8.setText(String.valueOf(0));
+                binding.TiradaD10.setText(String.valueOf(0));
+                binding.TiradaD12.setText(String.valueOf(0));
+                binding.TiradaD20.setText(String.valueOf(0));
+                binding.TiradaD100.setText(String.valueOf(0));
 
             }
         });
@@ -149,7 +169,6 @@ public class MainActivity extends AppCompatActivity {
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
             }
         });
-
 
 
 
