@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 binding.ResultadoD4.setText(String.valueOf(azar));
                 binding.TiradaD4.setText(String.valueOf(contadorD4));
                 contadorGeneral++;
+                binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
             }
         });
 
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 binding.ResultadoD6.setText(String.valueOf(azar));
                 binding.TiradaD6.setText(String.valueOf(contadorD6));
                 contadorGeneral++;
+                binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
             }
         });
 
@@ -82,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 binding.ResultadoD8.setText(String.valueOf(azar));
                 binding.TiradaD8.setText(String.valueOf(contadorD8));
                 contadorGeneral++;
+                binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
             }
         });
 
@@ -95,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 binding.ResultadoD10.setText(String.valueOf(azar));
                 binding.TiradaD10.setText(String.valueOf(contadorD10));
                 contadorGeneral++;
+                binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
             }
         });
 
