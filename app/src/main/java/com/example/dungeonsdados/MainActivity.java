@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     //VARIABLES
     public int contadorGeneral=0;
     public int contadorD4=0;
+    public int contadorD6=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,19 @@ public class MainActivity extends AppCompatActivity {
                 contadorD4++;
                 binding.ResultadoD4.setText(String.valueOf(azar));
                 binding.TiradaD4.setText(String.valueOf(contadorD4));
+                contadorGeneral++;
+            }
+        });
+
+        binding.BotonD6.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View view) {
+                Random rand = new Random();
+                int azar = rand.nextInt(6)+1;
+                contadorD6++;
+                binding.ResultadoD6.setText(String.valueOf(azar));
+                binding.TiradaD6.setText(String.valueOf(contadorD6));
                 contadorGeneral++;
             }
         });
