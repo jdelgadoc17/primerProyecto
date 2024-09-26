@@ -34,16 +34,16 @@
         android:id="@+id/Titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dungeons&amp;Dados"
-        android:textSize="32dp"
-        android:textColor="#FFFFFF"
         android:background="#000000"
+        android:text="Dungeons&amp;Dados"
+        android:textColor="#FFFFFF"
+        android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.029" />
 
     <Button
         android:id="@+id/BotonReset"
@@ -93,7 +93,7 @@
         android:layout_width="96dp"
         android:layout_height="53dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="264dp"
         android:text="D4"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
