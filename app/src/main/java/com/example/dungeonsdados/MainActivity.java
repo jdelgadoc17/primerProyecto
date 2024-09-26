@@ -29,10 +29,24 @@ public class MainActivity extends AppCompatActivity {
     public int contadorD20=0;
     public int contadorD100=0;
 
+    public static final String ESTADO_CONTADOR="VALORES";
+
+    ArrayList<String> valores = new ArrayList<>();
+
 
     @Override
-    public void onSaveInstanceState(Bundle savedInstance) {
-        super.onSaveInstanceState(savedInstance);
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+
+        savedInstanceState.putInt("CONTADOR_GENERAL", contadorGeneral);
+        savedInstanceState.putInt("CONTADOR_D4", contadorD4);
+        savedInstanceState.putInt("CONTADOR_D6", contadorD6);
+        savedInstanceState.putInt("CONTADOR_D8", contadorD8);
+        savedInstanceState.putInt("CONTADOR_D10", contadorD10);
+        savedInstanceState.putInt("CONTADOR_D12", contadorD12);
+        savedInstanceState.putInt("CONTADOR_D20", contadorD20);
+        savedInstanceState.putInt("CONTADOR_D100", contadorD100);
+        super.onSaveInstanceState(savedInstanceState);
+
 
 
 
@@ -46,12 +60,45 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        if (savedInstanceState != null) {
+            valores = savedInstanceState.getStringArrayList(ESTADO_CONTADOR);
+            contadorGeneral = savedInstanceState.getInt("CONTADOR_GENERAL");
+            contadorD4 = savedInstanceState.getInt("CONTADOR_D4");
+            contadorD6 = savedInstanceState.getInt("CONTADOR_D6");
+            contadorD8 = savedInstanceState.getInt("CONTADOR_D8");
+            contadorD10 = savedInstanceState.getInt("CONTADOR_D10");
+            contadorD12 = savedInstanceState.getInt("CONTADOR_D12");
+            contadorD20 = savedInstanceState.getInt("CONTADOR_D20");
+            contadorD100 = savedInstanceState.getInt("CONTADOR_D100");
+
+            binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
+            binding.TiradaD4.setText(String.valueOf(contadorD4));
+            binding.TiradaD6.setText(String.valueOf(contadorD6));
+            binding.TiradaD8.setText(String.valueOf(contadorD8));
+            binding.TiradaD10.setText(String.valueOf(contadorD10));
+            binding.TiradaD12.setText(String.valueOf(contadorD12));
+            binding.TiradaD20.setText(String.valueOf(contadorD20));
+            binding.TiradaD100.setText(String.valueOf(contadorD100));
+        }
+
+
+
 
         //RESET
         binding.BotonReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 contadorGeneral=0;
+                contadorD4=0;
+                contadorD6=0;
+                contadorD8=0;
+                contadorD10=0;
+                contadorD12=0;
+                contadorD20=0;
+                contadorD100=0;
+                valores.clear();
+
+
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
                 binding.ResultadoD4.setText("-");
                 binding.ResultadoD6.setText("-");
@@ -61,13 +108,14 @@ public class MainActivity extends AppCompatActivity {
                 binding.ResultadoD20.setText("-");
                 binding.ResultadoD100.setText("-");
 
-                binding.TiradaD4.setText(String.valueOf(0));
+                binding.TiradaD4.setText(String.valueOf(0)); //CAMBIAR EL GUARDADO
                 binding.TiradaD6.setText(String.valueOf(0));
                 binding.TiradaD8.setText(String.valueOf(0));
                 binding.TiradaD10.setText(String.valueOf(0));
                 binding.TiradaD12.setText(String.valueOf(0));
                 binding.TiradaD20.setText(String.valueOf(0));
                 binding.TiradaD100.setText(String.valueOf(0));
+
 
             }
         });
@@ -83,6 +131,8 @@ public class MainActivity extends AppCompatActivity {
                 binding.TiradaD4.setText(String.valueOf(contadorD4));
                 contadorGeneral++;
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
+                valores.add(String.valueOf(contadorD4));
+
             }
         });
 
@@ -97,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
                 binding.TiradaD6.setText(String.valueOf(contadorD6));
                 contadorGeneral++;
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
+                valores.add(String.valueOf(contadorD6));
             }
         });
 
@@ -111,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
                 binding.TiradaD8.setText(String.valueOf(contadorD8));
                 contadorGeneral++;
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
+                valores.add(String.valueOf(contadorD8));
             }
         });
 
@@ -125,6 +177,8 @@ public class MainActivity extends AppCompatActivity {
                 binding.TiradaD10.setText(String.valueOf(contadorD10));
                 contadorGeneral++;
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
+                valores.add(String.valueOf(contadorD8));
+
             }
         });
 
@@ -139,6 +193,8 @@ public class MainActivity extends AppCompatActivity {
                 binding.TiradaD12.setText(String.valueOf(contadorD12));
                 contadorGeneral++;
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
+                valores.add(String.valueOf(contadorD12));
+
             }
         });
 
@@ -153,6 +209,8 @@ public class MainActivity extends AppCompatActivity {
                 binding.TiradaD20.setText(String.valueOf(contadorD20));
                 contadorGeneral++;
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
+                valores.add(String.valueOf(contadorD20));
+
             }
         });
 
@@ -167,6 +225,8 @@ public class MainActivity extends AppCompatActivity {
                 binding.TiradaD100.setText(String.valueOf(contadorD100));
                 contadorGeneral++;
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
+                valores.add(String.valueOf(contadorD100));
+
             }
         });
 
