@@ -129,6 +129,13 @@ public class MainActivity extends AppCompatActivity {
                 contadorD4++;
                 binding.ResultadoD4.setText(String.valueOf(azar));
                 binding.TiradaD4.setText(String.valueOf(contadorD4));
+                binding.ResultadoD6.setText(String.valueOf("-"));
+                binding.ResultadoD8.setText(String.valueOf("-"));
+                binding.ResultadoD10.setText(String.valueOf("-"));
+                binding.ResultadoD12.setText(String.valueOf("-"));
+                binding.ResultadoD20.setText(String.valueOf("-"));
+                binding.ResultadoD100.setText(String.valueOf("-"));
+
                 contadorGeneral++;
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
                 valores.add(String.valueOf(contadorD4));
@@ -147,6 +154,12 @@ public class MainActivity extends AppCompatActivity {
                 binding.TiradaD6.setText(String.valueOf(contadorD6));
                 contadorGeneral++;
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
+                binding.ResultadoD4.setText(String.valueOf("-"));
+                binding.ResultadoD8.setText(String.valueOf("-"));
+                binding.ResultadoD10.setText(String.valueOf("-"));
+                binding.ResultadoD12.setText(String.valueOf("-"));
+                binding.ResultadoD20.setText(String.valueOf("-"));
+                binding.ResultadoD100.setText(String.valueOf("-"));
                 valores.add(String.valueOf(contadorD6));
             }
         });
@@ -161,6 +174,12 @@ public class MainActivity extends AppCompatActivity {
                 binding.ResultadoD8.setText(String.valueOf(azar));
                 binding.TiradaD8.setText(String.valueOf(contadorD8));
                 contadorGeneral++;
+                binding.ResultadoD4.setText(String.valueOf("-"));
+                binding.ResultadoD6.setText(String.valueOf("-"));
+                binding.ResultadoD10.setText(String.valueOf("-"));
+                binding.ResultadoD12.setText(String.valueOf("-"));
+                binding.ResultadoD20.setText(String.valueOf("-"));
+                binding.ResultadoD100.setText(String.valueOf("-"));
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
                 valores.add(String.valueOf(contadorD8));
             }
@@ -176,6 +195,12 @@ public class MainActivity extends AppCompatActivity {
                 binding.ResultadoD10.setText(String.valueOf(azar));
                 binding.TiradaD10.setText(String.valueOf(contadorD10));
                 contadorGeneral++;
+                binding.ResultadoD4.setText(String.valueOf("-"));
+                binding.ResultadoD6.setText(String.valueOf("-"));
+                binding.ResultadoD8.setText(String.valueOf("-"));
+                binding.ResultadoD12.setText(String.valueOf("-"));
+                binding.ResultadoD20.setText(String.valueOf("-"));
+                binding.ResultadoD100.setText(String.valueOf("-"));
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
                 valores.add(String.valueOf(contadorD8));
 
@@ -192,6 +217,12 @@ public class MainActivity extends AppCompatActivity {
                 binding.ResultadoD12.setText(String.valueOf(azar));
                 binding.TiradaD12.setText(String.valueOf(contadorD12));
                 contadorGeneral++;
+                binding.ResultadoD4.setText(String.valueOf("-"));
+                binding.ResultadoD6.setText(String.valueOf("-"));
+                binding.ResultadoD8.setText(String.valueOf("-"));
+                binding.ResultadoD10.setText(String.valueOf("-"));
+                binding.ResultadoD20.setText(String.valueOf("-"));
+                binding.ResultadoD100.setText(String.valueOf("-"));
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
                 valores.add(String.valueOf(contadorD12));
 
@@ -208,6 +239,12 @@ public class MainActivity extends AppCompatActivity {
                 binding.ResultadoD20.setText(String.valueOf(azar));
                 binding.TiradaD20.setText(String.valueOf(contadorD20));
                 contadorGeneral++;
+                binding.ResultadoD4.setText(String.valueOf("-"));
+                binding.ResultadoD6.setText(String.valueOf("-"));
+                binding.ResultadoD8.setText(String.valueOf("-"));
+                binding.ResultadoD10.setText(String.valueOf("-"));
+                binding.ResultadoD12.setText(String.valueOf("-"));
+                binding.ResultadoD100.setText(String.valueOf("-"));
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
                 valores.add(String.valueOf(contadorD20));
 
@@ -224,6 +261,12 @@ public class MainActivity extends AppCompatActivity {
                 binding.ResultadoD100.setText(String.valueOf(azar));
                 binding.TiradaD100.setText(String.valueOf(contadorD100));
                 contadorGeneral++;
+                binding.ResultadoD4.setText(String.valueOf("-"));
+                binding.ResultadoD6.setText(String.valueOf("-"));
+                binding.ResultadoD8.setText(String.valueOf("-"));
+                binding.ResultadoD10.setText(String.valueOf("-"));
+                binding.ResultadoD12.setText(String.valueOf("-"));
+                binding.ResultadoD20.setText(String.valueOf("-"));
                 binding.ContadorTotalTiradas.setText(String.valueOf(contadorGeneral));
                 valores.add(String.valueOf(contadorD100));
 
